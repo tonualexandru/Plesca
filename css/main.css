@@ -375,3 +375,54 @@ body, html{
 	display:  inline-block;
 	margin: 0 5px 20px;
 }
+/*sign up*/
+.platforms{
+	display: flex;
+	justify-content: space-between;
+}
+#sign_form, .platforms{
+	width: calc(100% - 30px);
+	margin: 0 auto
+}
+.white_text{
+	color: #ffffff;
+	font-family: BerlinSansFB-Reg;
+	font-size: 20px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: center;
+	color: #eaeaea;
+}
+input.full_size{
+	width: 100%;
+	height: 32px;
+	background-color: #eaeaea;
+	border: solid 1px #888888;
+	margin: 10px 0 8px;
+	outline: none;
+	color: #6e6b6b;
+	font-size: 20px;
+	font-family: BerlinSansFB-Reg;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+input.c_diploma{
+	margin: 10px auto 50px;
+	border: 0;
+}
+#sign_form input[type=checkbox]{
+	width: 40px;
+	height:40px;
+    vertical-align: middle;
+}
+.ngo_container #vp_head > span{
+	text-align: left;
+	padding: 0 10px;
+    font-size: 26px;
+}
+
+
+
