@@ -547,4 +547,92 @@ input.sva_btn{
 	text-align: center;
 	color: #eaeaea;
 }
+/*events*/
+
+.event_item{
+	width: calc(100% - 30px);
+	height: 190px;
+	margin: 15px auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.name_event{
+	background-color: #ffffff60;
+	width: 170px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.name_event:nth-of-type(even){
+	left: auto;
+	right: 0;
+	height: 70px;
+	width: 160px;
+	background-color: #ffffffbf;
+}
+.name_event span{
+	font-family: BerlinSansFB-Reg;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #ff2e63;
+	max-width: 150px;
+	display: block;
+	padding: 0 0 0 10px;
+}
+.name_event:nth-of-type(even) span{
+	font-size: 18px;
+	text-align: right;
+	color: #252a34;
+	max-width: unset;
+	padding: 0 10px 0 0;
+    margin: 0 0 0 auto;
+}
+.event_item button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 10px;
+	margin: 0!important;
+	font-size: 16px;
+	height: 36px;
+}
+.event_item:nth-of-type(even) .name_event{
+	left: auto;
+	right: 0;
+}
+.event_item:nth-of-type(even) .name_event span{
+	text-align: right;
+	padding: 0 10px 0 0;
+    margin: 0 0 0 auto;
+}
+.event_item:nth-of-type(even) .name_event:last-of-type{
+	left: 0;
+	right: auto;
+}
+.event_item:nth-of-type(even) .name_event:last-of-type span{
+	text-align: left;
+    margin: 0 auto 0 0;
+    padding: 0 0 0 10px;
+}
+/*event*/
+.sign_form.event_f .white_text{
+	text-align: right;
+}
+
+
+
+
+
+
 
