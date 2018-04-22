@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- <title>SVA</title> -->
+	<title>SVA</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!-- <link href="resources/favico.png" rel="icon" type="image/x-icon" /> -->
+	<link href="resources/favico.png" rel="icon" type="image/x-icon" />
 </head>
 <body>
 	<div id="main_container" class="edit_v">
+		<div id="menu">
+			<div class="top_block">
+				<img src="resources/logo.png" width="auto" height="40" alt='menu_logo'>
+				<span>Menu</span>
+			</div>
+			<ul>
+				<li>
+					<a href="volunteer_passport.html">Volunteer Passports</a>
+				</li>
+				<li>
+					<a href="ngos_view.html">NGOs</a>
+				</li>
+				<li>
+					<a href="events.html">Events</a>
+				</li>
+				<li>
+					<a href="edit_volunteer.html">My account</a>
+				</li>
+				<li>
+					<a href="event_create.html">Add new event</a>
+				</li>
+				<li>
+					<a href="index.html">Log out</a>
+				</li>
+			</ul>
+		</div>
 		<header id="v_head">
 			<img src="resources/logo.png" width="auto" height="40" align="logo">
 			<button class="border_btn">Edit Profile Details</button>
@@ -28,13 +54,21 @@
 			</div>
 			<div>
 				<label class="white_text">Unload a cover image:</label>
-				<input class="full_size" type="text" name="descrition">
+				<div class="upload">
+					<label for="file-upload" class="custom-file-upload">Browse</label>
+					<input id="file-upload" name="file" type="file"/>
+				</div>
 			</div>
-			<button class="border_btn">Upload your CV</button>
+			<div>
+				<label class="white_text">Colaboration methods:</label>
+				<input class="full_size" type="text" name="methods">
+			</div>
+			<textarea class="warning" rows="6" cols="50" placeholder="Validation rule: Put here your Email, phone number or link to register form for volunteers"></textarea>
 			<div class="data_block">
 				<input type="submit" class="sva_btn pink" value="Create" />
 			</div>
 		</form>
 	</div>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
