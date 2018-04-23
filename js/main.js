@@ -15,14 +15,13 @@ var touchstartX = 0,
         handleGesure();
     }, false); 
     function handleGesure() {
-    	console.log('kjngjn')
         var content = document.querySelector('#menu');
-        if (Math.round(touchendX) < Math.round(touchstartX)) {
+        if (Math.round(touchendX) + 100 < Math.round(touchstartX)) {
             if ( content.className.includes('active')) {
                 content.className = "";
             }
         }
-        if (Math.round(touchendX) > Math.round(touchstartX)) {
+        if (Math.round(touchendX) + 100 > Math.round(touchstartX)) {
             if (!content.className.includes('active')) {
                 content.className = 'active';
             }
