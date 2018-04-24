@@ -4,108 +4,113 @@
 	<title>SVA</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="resources/favico.png" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="favico.png" rel="icon" type="image/x-icon">
 </head>
 <body>
-	<div id="main_container" class="edit_v">
-		<div id="menu">
-			<div class="top_block">
-				<img src="resources/logo.png" width="auto" height="40" alt='menu_logo'>
-				<span>Menu</span>
-			</div>
-			<ul>
-				<li>
-					<a href="volunteer_passport.html">Volunteer Passports</a>
-				</li>
-				<li>
-					<a href="ngos_view.html">NGOs</a>
-				</li>
-				<li>
-					<a href="events.html">Events</a>
-				</li>
-				<li>
-					<a href="edit_volunteer.html">My account</a>
-				</li>
-				<li>
-					<a href="event_create.html">Add new event</a>
-				</li>
-				<li>
-					<a href="index.html">Log out</a>
-				</li>
-			</ul>
+<div id="main_container" class="edit_v">
+	<div id="menu">
+		<div class="top_block">
+			<img src="logo.png" width="auto" height="40" alt="menu_logo">
+			<span>Menu</span>
 		</div>
-		<header id="v_head">
-			<span>Maria Munteanu</span>
-			<button class="border_btn">Edit Profile Details</button>
-		</header>
-		<div class="user_bg" style="background-image: url('resources/');">
-			<span>Add a cover picture</span>
-			<div class="img_block">
-				<img class="user_img" src="resources/dp.jpg">
-				<span>Add a profile picture</span>
-			</div>
-		</div>
-		<h4 class="heading second_font vp_heading">Personal Dates:</h4>
-		<form class="sign_form">
-			<div>
-				<label class="white_text">Date of Birth</label>
-				<input class="full_size" type="date" name="birth">
-			</div>
-			<div>
-				<label class="white_text">Mobile Phone</label>
-				<input class="full_size" type="tel" name="phone">
-			</div>
-			<div>
-				<label class="white_text">Address</label>
-				<input class="full_size" type="text" name="address">
-			</div>
-			<div>
-				<input type="checkbox" name="checker">
-				<label class="white_text">Show my personal details</label>
-			</div>
-			<h4 class="heading second_font vp_heading">Volunteer Experience</h4>
-			<div>
-				<label class="white_text">Event name:</label>
-				<input class="full_size" type="text" name="event">
-			</div>
-			<div>
-				<label class="white_text">Event organizer:</label>
-				<input class="full_size" type="text" name="organizer">
-			</div>
-			<div>
-				<label class="white_text">Event description:</label>
-				<input class="full_size" type="text" name="descrition">
-			</div>
-			<button class="border_btn">Upload diploma</button>
-			<h4 class="heading second_font vp_heading">Linguistic capacities</h4>
-			<div>
-				<label class="white_text">Native language:</label>
-				<input class="full_size" type="text" name="native">
-			</div>
-			<div>
-				<label class="white_text">Second language:</label>
-				<input class="full_size" type="text" name="second">
-			</div>
-			<div>
-				<label class="white_text">Level:</label>
-				<input class="full_size" type="text" name="level">
-			</div>
-			<h4 class="heading second_font vp_heading">Skills and Hobbies</h4>
-			<div>
-				<label class="white_text">Add Skills:</label>
-				<input class="full_size" type="text" name="skill">
-			</div>
-			<div>
-				<label class="white_text">Add Hobbies:</label>
-				<input class="full_size" type="text" name="hobby">
-			</div>
-			<button class="border_btn">Upload your CV</button>
-			<div class="data_block">
-				<input type="submit" class="sva_btn pink" value="Create" />
-			</div>
-		</form>
+		<ul>
+			<li>
+				<a href="volunteer_passport.html">Volunteer Passport</a>
+			</li>
+			<li>
+				<a href="ngos_view.html">NGOs</a>
+			</li>
+			<li>
+				<a href="volunteers.html">Volunteers</a>
+			</li>
+			<li>
+				<a href="events.html">Events</a>
+			</li>
+			<li>
+				<a href="edit_volunteer.html" class="current">My account</a>
+			</li>
+			<li>
+				<a href="event_create.html">Add new event</a>
+			</li>
+			<li>
+				<a href="index.html">Log out</a>
+			</li>
+		</ul>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+	<header id="v_head">
+		<span>Maria Munteanu</span>
+		<button class="border_btn">Edit Profile Details</button>
+	</header>
+	<div class="user_bg" style="background-image: url('');">
+		<span>Add a cover picture</span>
+		<div class="img_block">
+			<img class="user_img" src="dp.jpg">
+			<span>Add a profile picture</span>
+		</div>
+	</div>
+	<h4 class="heading second_font vp_heading">Personal Dates:</h4>
+	<form class="sign_form">
+		<div>
+			<label class="white_text">Date of Birth</label>
+			<input class="full_size" type="date" name="birth">
+		</div>
+		<div>
+			<label class="white_text">Mobile Phone</label>
+			<input class="full_size" type="tel" name="phone">
+		</div>
+		<div>
+			<label class="white_text">Address</label>
+			<input class="full_size" type="text" name="address">
+		</div>
+		<div>
+			<input type="checkbox" name="checker">
+			<label class="white_text">Show my personal details</label>
+		</div>
+		<h4 class="heading second_font vp_heading">Volunteer Experience</h4>
+		<div>
+			<label class="white_text">Event name:</label>
+			<input class="full_size" type="text" name="event">
+		</div>
+		<div>
+			<label class="white_text">Event organizer:</label>
+			<input class="full_size" type="text" name="organizer">
+		</div>
+		<div>
+			<label class="white_text">Event description:</label>
+			<input class="full_size" type="text" name="descrition">
+		</div>
+		<button class="border_btn">Upload diploma</button>
+		<h4 class="heading second_font vp_heading">Linguistic capacities</h4>
+		<div>
+			<label class="white_text">Native language:</label>
+			<input class="full_size" type="text" name="native">
+		</div>
+		<div>
+			<label class="white_text">Second language:</label>
+			<input class="full_size" type="text" name="second">
+		</div>
+		<div>
+			<label class="white_text">Level:</label>
+			<input class="full_size" type="text" name="level">
+		</div>
+		<h4 class="heading second_font vp_heading">Skills and Hobbies</h4>
+		<div>
+			<label class="white_text">Add Skills:</label>
+			<input class="full_size" type="text" name="skill">
+		</div>
+		<div>
+			<label class="white_text">Add Hobbies:</label>
+			<input class="full_size" type="text" name="hobby">
+		</div>
+		<button class="border_btn">Upload your CV</button>
+		<div class="data_block">
+			<input type="submit" class="sva_btn pink" value="Create">
+		</div>
+	</form>
+</div>
+<script type="text/javascript" src="main.js"></script>
+
+
 </body>
 </html>

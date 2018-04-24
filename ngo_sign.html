@@ -4,46 +4,34 @@
 	<title>SVA</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="resources/favico.png" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="favico.png" rel="icon" type="image/x-icon" />
 </head>
 <body>
 	<div id="main_container">
 		<div id="menu">
 			<div class="top_block">
-				<img src="resources/logo.png" width="auto" height="40" alt='menu_logo'>
+				<img src="logo.png" width="auto" height="40" alt='menu_logo'>
 				<span>Menu</span>
 			</div>
 			<ul>
 				<li>
-					<a href="volunteer_passport.html">Volunteer Passports</a>
-				</li>
-				<li>
-					<a href="ngos_view.html">NGOs</a>
-				</li>
-				<li>
 					<a href="events.html">Events</a>
 				</li>
 				<li>
-					<a href="edit_volunteer.html">My account</a>
-				</li>
-				<li>
-					<a href="event_create.html">Add new event</a>
-				</li>
-				<li>
-					<a href="index.html">Log out</a>
+					<a href="index.html">Home</a>
 				</li>
 			</ul>
 		</div>
-		<img id="logo" src="resources/logo.png" width="100" height="auto" alt="logo">
+		<img id="logo" src="logo.png" width="100" height="auto" alt="logo">
 		<h4 class="heading">Sign up</h4>
 		<div class="platforms">
-			<img src="resources/gp.png" width="46" height="46" alt="logo">
-			<img src="resources/fb.png" width="46" height="46" alt="logo">
-			<img src="resources/tw.png" width="46" height="46" alt="logo">
+			<img src="gp.png" width="46" height="46" alt="logo">
+			<img src="fb.png" width="46" height="46" alt="logo">
+			<img src="tw.png" width="46" height="46" alt="logo">
 		</div>
 		<h5 class="white_text">or</h5>
-		<form class="sign_form">
+		<form class="sign_form" action="ngo_page.html" method="GET">
 			<label class="white_text">NGO's name</label>
 			<input class="full_size" type="text" name="name">
 			<label class="white_text">Email</label>
@@ -59,6 +47,6 @@
 			<input type="submit" class="c_diploma" value="NEXT" name="submit_form">
 		</form>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

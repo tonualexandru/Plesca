@@ -21,9 +21,21 @@ var touchstartX = 0,
                 content.className = "";
             }
         }
-        if (Math.round(touchendX) + 100 > Math.round(touchstartX)) {
+        if (Math.round(touchendX) - 100 > Math.round(touchstartX)) {
             if (!content.className.includes('active')) {
                 content.className = 'active';
             }
         }
+    }
+var n_wrapper = document.querySelectorAll('#main_container.n_view .item_wrapper');
+    for (var i = n_wrapper.length - 1; i >= 0; i--) {
+        n_wrapper[i].addEventListener('click', function() {
+            window.location = 'ngo_page.html';
+        })
+    }
+var n_wrapper = document.querySelectorAll('#main_container.v_view .item_wrapper');
+    for (var i = n_wrapper.length - 1; i >= 0; i--) {
+        n_wrapper[i].addEventListener('click', function() {
+            window.location = 'volunteer_passport.html';
+        })
     }

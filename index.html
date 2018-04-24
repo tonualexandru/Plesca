@@ -4,58 +4,54 @@
 	<title>SVA</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="resources/favico.png" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="favico.png" rel="icon" type="image/x-icon">
 </head>
 <body>
-	<div id="main_container">
-		<div id="menu">
-			<div class="top_block">
-				<img src="resources/logo.png" width="auto" height="40" alt='menu_logo'>
-				<span>Menu</span>
-			</div>
-			<ul>
-				<li>
-					<a href="volunteer_passport.html">Volunteer Passports</a>
-				</li>
-				<li>
-					<a href="ngos_view.html">NGOs</a>
-				</li>
-				<li>
-					<a href="events.html">Events</a>
-				</li>
-				<li>
-					<a href="edit_volunteer.html">My account</a>
-				</li>
-				<li>
-					<a href="event_create.html">Add new event</a>
-				</li>
-				<li>
-					<a href="index.html">Log out</a>
-				</li>
-			</ul>
+
+<div id="main_container">
+	<img id="logo" src="logo.png" width="100" height="auto" alt="logo">
+	<h4 class="heading">Societatea Voluntarilor Activi</h4>
+	<form id="loginpage" action="volunteer_passport.html" method="GET">
+		<div class="form_item">
+			<label class="form_label">Email:</label>
+			<input class="form_input" type="text" placeholder="Login" id="loginName" name="loginName" value="" required="">
 		</div>
-		<img id="logo" src="resources/logo.png" width="100" height="auto" alt="logo">
-		<h4 class="heading">Societatea Voluntarilor Activi</h4>
-		<form id="login_form">
-			<div class="form_item">
-				<label class="form_label">Email:</label>
-				<input class="form_input" type="email" placeholder="example@host.domain" name="email">
-			</div>
-			<div class="form_item">
-				<label class="form_label second_font">Password:</label>
-				<input class="form_input" type="password" name="password">
-			</div>
-			<div class="form_item">
-				<input type="submit" class="sva_btn" value="LOG IN" name="submit">
-			</div>
-		</form>
-		<h4 class="heading">SING UP</h4>
-		<div id="choose_block">
-			<button class="sva_btn">Volunteer</button>
-			<button class="sva_btn">NGO</button>
+		<div class="form_item">
+			<label class="form_label second_font">Password:</label>
+			<input class="form_input" type="password" placeholder="Password" id="loginPassword" name="loginPassword" value="" required="">
 		</div>
+		<div class="form_item">
+			<input type="submit" class="sva_btn" onclick="javascript:submitform()" value="LOG IN" name="submit">
+		</div>
+	</form>
+	<h4 class="heading">SING UP</h4>
+	<div id="choose_block">
+		<a href="v_signup.html" class="sva_btn">Volunteer</a>
+		<a href="ngo_sign.html" class="sva_btn">NGO</a>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+	<input id="userAction" style="display:none;" name="userAction" type="submit">
+</div>
+
+<script type="text/javascript">
+
+	function submitform()
+	{
+		if(document.getElementById("savecheck").checked)
+		{
+			localStorage.setItem(window.location.href+"username", document.getElementById("loginName").value);
+			localStorage.setItem(window.location.href+"password", document.getElementById("loginPassword").value);
+			localStorage.setItem(window.location.href+"checked", document.getElementById("savecheck").checked);
+		}
+		var e = document.createEvent('MouseEvents');
+		e.initEvent(
+			'click'
+			,true
+			,true
+		);
+		document.getElementById("userAction").dispatchEvent(e);
+	}
+</script>
 </body>
 </html>
+
