@@ -11,6 +11,16 @@ ul {
     padding: 0;
 }
 
+h1 {
+    font-size: 72px;
+    transition: opacity ease 0.5s;
+}
+
+* {
+    font-weight: 400;
+    font-family: Montserrat;
+}
+
 .d_fl {
     display: flex;
 }
@@ -35,13 +45,12 @@ section {
     right: 0;
     background: cadetblue;
     color: #fff;
-    font-family: Montserrat;
-    font-weight: 400;
 }
 
 section.hidden {
     opacity: 0;
 }
+
 .bg {
     position: absolute;
     top: 0;
@@ -50,6 +59,7 @@ section.hidden {
     right: 0;
     background: #fff no-repeat center;
     background-size: cover;
+    transition: background-image ease 1s;
 }
 
 .bg.actst {
@@ -71,25 +81,194 @@ section.hidden {
     top: 0;
     height: inherit;
     transform: translateX(0vw);
-    transition: transform ease 2s;
+    transition: transform ease 2.5s;
 }
-.carousel ul li{
+
+.carousel ul li {
     height: inherit;
     width: 100vw;
+    transform: scale(.6);
+    transition: transform ease 1s;
+    transition-delay: 0s;
+}
+
+.carousel ul li:first-of-type {
+    transform: none;
+}
+
+.carousel ul li.actst {
+    transform: scale(1);
+    transition-delay: 1s;
 }
 
 .content {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5) center;
+    position: relative;
+    margin-bottom: 200px;
+    background-size: contain;
+    transition: all ease 1s;
+    transition-delay: 0s;
 }
 
-@keyframes slideUp {
+.actst .content {
+    box-shadow: 0 0 12px 6px #fff,
+        0 0 20px 12px #f3a651,
+        0 0 28px 18px #f3a651;
+    transition-delay: 1s;
+}
+
+.content h4 {
+    font-size: 144px;
+    text-align: center;
+    line-height: 0.8;
+}
+
+.content span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 64px;
+    color: #f3a651;
+    transform: translate(-50%, -50%);
+    transition: all ease 1s;
+    opacity: 0;
+    text-align: center;
+}
+
+.actst span {
+    opacity: 1;
+}
+
+.actst span:nth-of-type(1) {
+    transform: translate(-130%, 150%);
+    transition-delay: 1s;
+}
+
+.actst span:nth-of-type(2) {
+    transform: translate(-50%, 250%);
+    transition-delay: 1.2s;
+}
+
+.actst span:nth-of-type(3) {
+    transform: translate(30%, 150%);
+    transition-delay: 1.4s;
+}
+
+
+
+
+
+/* imported */
+
+
+.intro {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px;
+}
+
+.intro>div {
+    height: 70px;
+    position: relative;
+    margin: 20px 0;
+}
+.intro h4 {
+    font-size: 72px;
+}
+.capital {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    line-height: 0.7;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(0);
+    transition: all ease 1s;
+
+}
+
+p.capital[data=ilele] {
+    padding-left: 6px;
+}
+
+.capital span {
+    opacity: 0;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    transform: translate(-100%, 0);
+    padding-right: 5px;
+    line-height: 0.7;
+
+}
+
+.intro.actst .capital span {
+    transition: all ease 0.3s;
+    font-size: 0;
+}
+
+.soon {
+    position: relative;
+    overflow: hidden;
+}
+
+.intro h4 {
+    position: absolute;
+    opacity: 0;
+    transition: all ease 0.7s 1.4s;
+    transform: translateY(100%);
+    margin: 0;
+    line-height: 1;
+}
+
+.intro.actst .capital {
+    opacity: 1;
+}
+
+.intro.actst h4 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro.actst .soon {
+    height: 90px;
+}
+
+.intro.destroy .capital {
+    opacity: 0;
+}
+
+
+.container.actst .intro,
+.container.actst .mask h3 {
+    opacity: 0;
+}
+
+
+
+@keyframes appear {
     0% {
-        transform: translate(-50%, 0%);
+        opacity: 0;
     }
+
     100% {
-        transform: translate(-50%, 100%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        transform: translate(-100%, 0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
     }
 }

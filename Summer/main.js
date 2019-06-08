@@ -1,8 +1,37 @@
 window.addEventListener("load", () => {
+    // intro
+    let capital = qA('.capital'),
+            fadeLettter = function (index) {
+                capital[index].style = 'transform : translateY(' + index * 50 + '%); animation: appear 1s ease forwards;';
+                var letters = capital[index].getAttribute("data").split(""),
+                    left = 80,
+                    insert = function (contor) {
+                        capital[index].innerHTML += `<span style="left:${left}px; animation: fade 0.5s ease forwards ${contor / 10}s">${letters[contor]}</span>`;
+                        left += qA('span', capital[index])[contor].offsetWidth;
+                    }
 
+                for (let i = 0; i < letters.length; i++) {
+                    insert(i);
+                }
+            }
+        fadeLettter(0);
+        setTimeout(() => {
+            fadeLettter(1);
+        }, 1500);
+        setTimeout(() => {
+            fadeLettter(2);
+            setTimeout(() => {
+                toggleIt(q('.intro'));
+                capital[0].style = 'transform : translateY(180%)';
+                capital[1].style = 'transform : translate(95%, 50%)';
+                capital[2].style = 'transform : translate(185%, -80%)';
+            }, 1500);
+        }, 2200);
+
+    // carousel
     let list = q('.showroom ul'),
         items = qA('.showroom li'),
-        bgs = qA('.bg'),
+        wall = q('.bg'),
         paths = [],
         images = [],
         pathsCount = items.length > 1 ? items.length : 2,
@@ -17,7 +46,7 @@ window.addEventListener("load", () => {
         },
         slideCarousel = (switches, initial) => {
             list.style.transform = `translateX(-${switches * 100}vw)`
-            clearAll(items);
+            clearAll(items, 'actst');
             toggleIt(items[switches]);
         },
         host = window.location.pathname.split("index")[0];
@@ -32,20 +61,18 @@ window.addEventListener("load", () => {
     }
 
     changePath = (switches) => {
-        bgs.forEach((element, index) => {
-            if (switches < paths.length - index)
-                element.style.backgroundImage = `url('${paths[index + switches]}`;
-        });
+        wall.style.backgroundImage = `url('${paths[switches]}`;
     }
-
+    preloadImage(host + './assets/bg0_2.jpg');
     setTimeout(() => {
-        let iteration = 0;
+        let iteration = 0,
+            slide;
         setInterval(() => {
-            slideCarousel(iteration % pathsCount);
-            changePath(iteration++ % pathsCount);
+            slide = iteration < pathsCount ? iteration % pathsCount : 2;
+            slideCarousel(slide);
+            changePath(slide);
+            iteration++;
+            paths[0] = './assets/bg0_2.jpg';
         }, 3000);
-
-        console.log("record", list, bgs);
-
-    }, 100);
+    }, 1000);
 });
