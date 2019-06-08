@@ -48,5 +48,4 @@ window.addEventListener("load", () => {
         console.log("record", list, bgs);
 
     }, 100);
-
 });
