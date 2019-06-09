@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
         let iteration = 0,
             slide;
         setInterval(() => {
-            slide = iteration < pathsCount ? iteration % pathsCount : 2;
+            slide = iteration < pathsCount ? iteration % pathsCount : 0;
             slideCarousel(slide);
             changePath(slide);
             iteration++;
